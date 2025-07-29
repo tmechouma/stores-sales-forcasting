@@ -60,7 +60,7 @@ Data assessment is a fundamental responsibility in a data scientist's workflow. 
 -  Missing Values
 -  Visualization of Missing Values 
 
-####  1.1.2 Coherence :
+####  1.1.3 Coherence :
 - Business rules integrity check 
 - Modeling Logic integrity check (foreign keys, primary keys, Unique ID, etc)
 - Temporal logic integrity (data of birth can't before transaction date )
