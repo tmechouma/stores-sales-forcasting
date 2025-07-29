@@ -40,6 +40,13 @@ Develop a Python ML approach to help store managers forecast future sales.
 ## Workflow :
 The following workflow outlines the general process i conceived based on my experience. While we will follow it as a guideline, not all steps may be applicable to our specific case. It can be considered as a checklist.
 
+  1. **Data Assessment and Preparation**  
+  2. **Feature Engineering**  
+  3. **ML Model Selection**  
+  4. **ML Model Evaluation**  
+  5. **ML Model Deployment**  
+
+
 ## 1. Data Assessment and Preparation : 
 
 ###  1.1 Data Assessment : 
