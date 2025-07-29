@@ -31,6 +31,16 @@ The dataset represents sales transactions table (2121 rows and 21 columns).
 | Discount        | Discount applied to the sale. |
 | Profit          | Net profit earned from the sale. |
 
+## Question : 
+How can historical sales data from multiple stores be analyzed to identify strategies for increasing sales ?
+
 ## Objective : 
 Develop a Python ML approach to help store managers forecast future sales.
+
+## Workflow :
+The following workflow outlines the general process i conceived based on my experience. While we will follow it as a guideline, not all steps may be applicable to our specific case.
+## 1. Data Assessment and Preparation : 
+  - **1.1 Data Assessment**: 
+  - **1.2 Data Cleaning**: 
+
 
