@@ -1,4 +1,4 @@
-# sotres-sales-forcasting
+# stores-sales-forcasting
 Forcasting Stores Sales 
 ## Context :
   Some store managers are trying to figure out how to increase sales in their stores. They have historical sales data from various stores at their disposal.
