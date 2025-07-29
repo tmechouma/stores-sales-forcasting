@@ -44,19 +44,27 @@ The following workflow outlines the general process i conceived based on my expe
 
 ###  1.1 Data Assessment : 
 
+Data assessment is a fundamental responsibility in a data scientist's workflow. Ensuring data is accurate, complete, and semantically coherent is essential—otherwise, machine learning models risk becoming biased, overfitted, or fundamentally flawed. As the saying goes: Garbage in, garbage out. High-quality inputs are non-negotiable for reliable, actionable outcomes.
+
 ####  1.1.1 Accuracy : 
 -  Inspect the columns (conventional nomination of the columns)
 -  Cross-check with trusted sources if possible (example we need to check TPS and TVQ using Revenu Quebec API)
 -  Inspect the characters encoding (to be able to read the data and avoid information and data loss)
+-  Type conversion (data, time, money, etc)
 -  Duplicate Detection (To enhance the performance and avoid biases)
--  Outliers Detection ()
--  Spelling check for textual data
+-  Outliers Detection (Z-Score, IQR)
+-  Spell check for textual data
+-  Class Distribution to detect harmful imbalacing that may cause biases 
 
 ####  1.1.2 Completeness :
 -  Missing Values
+-  Visualization of Missing Values 
 
 ####  1.1.2 Coherence :
-
+- Business rules integrity check 
+- Modeling Logic integrity check (foreign keys, primary keys, Unique ID, etc)
+- Temporal logic integrity (data of birth can't before transaction date )
+- Spacial logic integrity 
 
 ###  1.2 Data Cleaning : 
 
