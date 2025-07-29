@@ -68,8 +68,8 @@ Data assessment is a fundamental responsibility in a data scientist's workflow. 
 
 ###  1.2 Data Cleaning and Preparation: 
 This step applies corrective measures from the data quality report to clean and prepare the raw data.
--  Remove special caracters, uncapitalization  of letters and remove space, etc.
--  Rename columns if needed
+-  Remove special caracters, formatting, uncapitalization  of letters and remove space, etc.
+-  Rename columns for columns matching purposes (if needed) 
 -  Handle missing values (imputation, conditional removal etc)
 -  Correction based on the cross-check with trusted sources (trusted dataset)
 -  Convert types (data, time, money, etc)
@@ -77,19 +77,23 @@ This step applies corrective measures from the data quality report to clean and 
 -  Remove, replace or impute outliers
 -  Correct the text based on Spell check
 -  Correction class Distribution using oversampling, undersampling and Class weighting
+-  Missing values imputation or conditional removal
 -  Correction based on the business rules 
 -  Correction based on the modeling logic 
 -  Correction based on the temporal logic 
 -  Correction based on the spacial logic 
 
 ## 2. Featuring Engineering : 
-- Data normalization
+
+- Data normalization and standardisation
+- Variables transformation if needed (log, binning)
 - Encoding categorical variables (One-Hot, Label Encoding).
 - Remove low-variance features
-- Check for highly correlated features
-- Create new features from existing ones
-- Features selection engineering 
+- Features categorization 
+- Creating new features from existing ones
 - Evaluate need for dimensionality reduction (PCA, umap, t-SNE)
+- Check for highly correlated features
+- Features selection  
 
 ## 3. ML Model Selection : 
 
