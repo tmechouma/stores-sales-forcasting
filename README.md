@@ -87,15 +87,21 @@ This step applies corrective measures from the data quality report to clean and 
 
 - Data normalization and standardisation
 - Variables transformation if needed (log, binning)
+- Target 
 - Encoding categorical variables (One-Hot, Label Encoding).
 - Remove low-variance features
 - Features categorization 
 - Creating new features from existing ones
 - Evaluate need for dimensionality reduction (PCA, umap, t-SNE)
 - Check for highly correlated features
-- Features selection  
+- Features selection
 
 ## 3. ML Model Selection : 
+- Clarify the Business Objective : What decision/action do we want to support with the model ? In our case: increase sales.
+- Identification of the target variable: in our case sales and its continuous 
+- Identification of the possible sub-objectives: Identify high-performing products/customers - Recommend product promotions - Detect patterns in high/low sales performance
+- Define the Nature of the Learning Problem (induction, deduction or abduction) : Regression (Forecasting future sales) - Classification (Flag products needing promotion ) - Clustering (Segment customers/products
+) - Causal inference (Determine if discount causes more sales) - Association rules (	Cross-sell products)
 
 ## 4. ML Model Evaluation :
 
