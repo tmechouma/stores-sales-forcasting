@@ -1,2 +1,2 @@
 # sotres-sales-forcasting
-Forcasting Sotres Sales 
+Forcasting Stores Sales 
