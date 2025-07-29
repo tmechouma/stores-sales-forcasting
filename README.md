@@ -56,16 +56,18 @@ Data assessment is a fundamental responsibility in a data scientist's workflow. 
 ####  1.1.1 Accuracy : 
 -  Inspect the columns (conventional nomination of the columns)
 -  Cross-check with trusted sources if possible (example we need to check TPS and TVQ using Revenu Quebec API)
--  Inspect the characters encoding (to be able to read the data and avoid information and data loss)
+-  Inspect the characters encoding latin-1, UTF-8 etc (to be able to read the data and avoid information and data loss)
 -  Type conversion (data, time, money, etc)
 -  Duplicate Detection (To enhance the performance and avoid biases)
 -  Outliers Detection (Z-Score, IQR)
--  Spell check for textual data
--  Class Distribution to detect harmful imbalacing that may cause biases 
+-  Spell check for textual data 
+-  Class Distribution to detect harmful imbalacing that may cause biases : Oversampling (SMOTE, ADASYN, random duplication) - Undersampling (random, Tomek links, cluster centroids) etc.
 
 ####  1.1.2 Completeness :
--  Missing Values
--  Visualization of Missing Values 
+-  Identify columns with missing values
+-  Determine percentage of missing values per feature
+-  Decide on strategy (imputation, deletion, flagging) 
+-  Visualization of Missing Values( missingno, seaborn, heatmaps, barres)
 
 ####  1.1.3 Coherence :
 - Business rules integrity check 
@@ -77,7 +79,7 @@ Data assessment is a fundamental responsibility in a data scientist's workflow. 
 This step applies corrective measures from the data quality report to clean and prepare the raw data.
 -  Remove special caracters, formatting, uncapitalization  of letters and remove space, etc.
 -  Rename columns for columns matching purposes (if needed) 
--  Handle missing values (imputation, conditional removal etc)
+-  Handle missing values (imputation, conditional removal etc) (imputation : Median, Average, k-NN etc)
 -  Correction based on the cross-check with trusted sources (trusted dataset)
 -  Convert types (data, time, money, etc)
 -  Remove duplicated rows
@@ -114,8 +116,8 @@ This step applies corrective measures from the data quality report to clean and 
 
 ## 4. ML Model Evaluation :
 
-- Define Evaluation Metrics : (Regression: MAE, MSE, RMSE, R²) (Classification: Accuracy, Precision, Recall, F1-Score, AUC-ROC)(Clustering: Silhouette Score, Davies-Bouldin Index)
-- Cross-Validation (K-Fold Cross-Validation, Stratified K-Fold (for imbalanced datasets), Time Series CV if applicable)
+- Define Evaluation Metrics : (Regression: MAE, MSE, RMSE, R²) - (Classification: Accuracy, Precision, Recall, F1-Score, AUC-ROC) - (Clustering: Silhouette Score, Davies-Bouldin Index)
+- Cross-Validation (K-Fold Cross-Validation, Stratified K-Fold (for imbalanced datasets), Time Series CV if applicable)  to ensure reliability and generalizability.
 - Compare Model Performance : Baseline vs. Trained Models)  - Different Algorithms like Random Forest and XGBoost etc.
 - Error Analysis : Confusion Matrix (Classification) -  Residual Plots (Regression) - Feature Importance Analysis.
 - Bias-Variance Tradeoff Check :Underfitting = High Bias → Improve model complexity / Overfitting = High Variance → Regularization, More Data.
@@ -128,6 +130,6 @@ This step applies corrective measures from the data quality report to clean and 
 -  Dockerization : Create dockerfile - Build and test locally.
 -  Cloud Service Selection : AWS - GCP - Azure - Serverless AWS Lambda etc.
 -  API Development : FastAPI or Flask etc.
--  CI/CD Pipeline : Drift Detection: Monitor data/model performance decay.
+-  CI/CD Pipeline : GitHub Actions / AWS CodePipeline
 -  Monitoring & Scaling : Logging: Track predictions/errors CloudWatch, etc - Scaling : Kubernetes (EKS/GKE), etc. - Drift Detection: Monitor data/model performance decay.
 
