@@ -38,13 +38,13 @@ How can historical sales data from multiple stores be analyzed to identify strat
 Develop a Python ML approach to help store managers forecast future sales.
 
 ## Workflow :
-The following workflow outlines the general process i conceived based on my experience. While we will follow it as a guideline, not all steps may be applicable to our specific case.
+The following workflow outlines the general process i conceived based on my experience. While we will follow it as a guideline, not all steps may be applicable to our specific case. It can be considered as a checklist.
 
 ## 1. Data Assessment and Preparation : 
 
 ###  1.1 Data Assessment : 
 
-Data assessment is a fundamental responsibility in a data scientist's workflow. Ensuring data is accurate, complete, and semantically coherent is essential—otherwise, machine learning models risk becoming biased, overfitted, or fundamentally flawed. As the saying goes: Garbage in, garbage out. High-quality inputs are non-negotiable for reliable, actionable outcomes.
+Data assessment is a fundamental responsibility in a data scientist's workflow. Ensuring data is accurate, complete, and semantically coherent is essential—otherwise, machine learning models risk becoming biased, overfitted, or fundamentally flawed. As the saying goes: Garbage in, garbage out. High-quality inputs are non-negotiable for reliable, actionable outcomes. This step ends with a report that allows to have a clear idea about the quality of our data.
 
 ####  1.1.1 Accuracy : 
 -  Inspect the columns (conventional nomination of the columns)
@@ -66,9 +66,30 @@ Data assessment is a fundamental responsibility in a data scientist's workflow. 
 - Temporal logic integrity (data of birth can't before transaction date )
 - Spacial logic integrity 
 
-###  1.2 Data Cleaning : 
+###  1.2 Data Cleaning and Preparation: 
+This step applies corrective measures from the data quality report to clean and prepare the raw data.
+-  Remove special caracters, uncapitalization  of letters and remove space, etc.
+-  Rename columns if needed
+-  Handle missing values (imputation, conditional removal etc)
+-  Correction based on the cross-check with trusted sources (trusted dataset)
+-  Convert types (data, time, money, etc)
+-  Remove duplicated rows
+-  Remove, replace or impute outliers
+-  Correct the text based on Spell check
+-  Correction class Distribution using oversampling, undersampling and Class weighting
+-  Correction based on the business rules 
+-  Correction based on the modeling logic 
+-  Correction based on the temporal logic 
+-  Correction based on the spacial logic 
 
 ## 2. Featuring Engineering : 
+- Data normalization
+- Encoding categorical variables (One-Hot, Label Encoding).
+- Remove low-variance features
+- Check for highly correlated features
+- Create new features from existing ones
+- Features selection engineering 
+- Evaluate need for dimensionality reduction (PCA, umap, t-SNE)
 
 ## 3. ML Model Selection : 
 
