@@ -1,5 +1,5 @@
 # stores-sales-forcasting
-Forcasting Stores Sales 
+During this forcasting stores sales project, i assume you already have the datascience and machine learning basics. 
 ## Context :
   Some store managers are trying to figure out how to increase sales in their stores. They have historical sales data from various stores at their disposal.
 
