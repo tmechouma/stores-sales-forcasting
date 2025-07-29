@@ -5,6 +5,8 @@ Forcasting Stores Sales
 
 ## Dataset description :  
 
+The dataset represents sales transactions table (2121 rows and 21 columns).
+
   | Column Name     | Description |
 |-----------------|-------------|
 | Row ID          | Unique identifier for each row in the dataset. |
@@ -28,4 +30,7 @@ Forcasting Stores Sales
 | Quantity        | Number of units sold. |
 | Discount        | Discount applied to the sale. |
 | Profit          | Net profit earned from the sale. |
+
+## Objective : 
+Develop a Python ML approach to help store managers forecast future sales.
 
