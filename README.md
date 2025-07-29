@@ -45,15 +45,26 @@ The following workflow outlines the general process i conceived based on my expe
 ###  1.1 Data Assessment : 
 
 ####  1.1.1 Accuracy : 
+-  Inspect the columns (conventional nomination of the columns)
+-  Cross-check with trusted sources if possible (example we need to check TPS and TVQ using Revenu Quebec API)
+-  Inspect the characters encoding (to be able to read the data and avoid information and data loss)
+-  Duplicate Detection (To enhance the performance and avoid biases)
+-  Outliers Detection ()
+-  Spelling check for textual data
+
 ####  1.1.2 Completeness :
+-  Missing Values
+
 ####  1.1.2 Coherence :
 
-- What is the target variable ?
-
-- What are the expected types of variables (numerical, categorical, text, datetime)?
-
-- Where does the data come from (source system, file, API, database)?
 
 ###  1.2 Data Cleaning : 
 
+## 2. Featuring Engineering : 
+
+## 3. ML Model Selection : 
+
+## 4. ML Model Evaluation :
+
+## 5. ML Model Deployment :
 
