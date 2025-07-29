@@ -39,8 +39,21 @@ Develop a Python ML approach to help store managers forecast future sales.
 
 ## Workflow :
 The following workflow outlines the general process i conceived based on my experience. While we will follow it as a guideline, not all steps may be applicable to our specific case.
+
 ## 1. Data Assessment and Preparation : 
-  - **1.1 Data Assessment**: 
-  - **1.2 Data Cleaning**: 
+
+###  1.1 Data Assessment : 
+
+####  1.1.1 Accuracy : 
+####  1.1.2 Completeness :
+####  1.1.2 Coherence :
+
+- What is the target variable ?
+
+- What are the expected types of variables (numerical, categorical, text, datetime)?
+
+- Where does the data come from (source system, file, API, database)?
+
+###  1.2 Data Cleaning : 
 
 
