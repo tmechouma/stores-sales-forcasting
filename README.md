@@ -94,8 +94,9 @@ This step applies corrective measures from the data quality report to clean and 
 
 - Data normalization and standardisation
 - Variables transformation if needed (log, binning)
-- Target 
+- Target variable determination
 - Encoding categorical variables (One-Hot, Label Encoding).
+- Split dataset (Train-Validation-Test)
 - Remove low-variance features
 - Features categorization 
 - Creating new features from existing ones
@@ -104,6 +105,7 @@ This step applies corrective measures from the data quality report to clean and 
 - Features selection
 
 ## 3. ML Model Selection : 
+
 - Clarify the Business Objective : What decision/action do we want to support with the model ? In our case: increase sales.
 - Identification of the target variable: in our case sales and its continuous 
 - Identification of the possible sub-objectives: Identify high-performing products/customers - Recommend product promotions - Detect patterns in high/low sales performance
@@ -112,5 +114,20 @@ This step applies corrective measures from the data quality report to clean and 
 
 ## 4. ML Model Evaluation :
 
+- Define Evaluation Metrics : (Regression: MAE, MSE, RMSE, R²) (Classification: Accuracy, Precision, Recall, F1-Score, AUC-ROC)(Clustering: Silhouette Score, Davies-Bouldin Index)
+- Cross-Validation (K-Fold Cross-Validation, Stratified K-Fold (for imbalanced datasets), Time Series CV if applicable)
+- Compare Model Performance : Baseline vs. Trained Models)  - Different Algorithms like Random Forest and XGBoost etc.
+- Error Analysis : Confusion Matrix (Classification) -  Residual Plots (Regression) - Feature Importance Analysis.
+- Bias-Variance Tradeoff Check :Underfitting = High Bias → Improve model complexity / Overfitting = High Variance → Regularization, More Data.
+- Final Validation on Test Set : Unseen data evaluation - Ensure generalization capability.
+- Document Results : Log metrics for reproducibility - Compare against business objectives.
+  
 ## 5. ML Model Deployment :
+
+-  Model Packaging : Save the trained model in joblib, pickle, or ONNX format -  Include preprocessing dependencies.
+-  Dockerization : Create dockerfile - Build and test locally.
+-  Cloud Service Selection : AWS - GCP - Azure - Serverless AWS Lambda etc.
+-  API Development : FastAPI or Flask etc.
+-  CI/CD Pipeline : Drift Detection: Monitor data/model performance decay.
+-  Monitoring & Scaling : Logging: Track predictions/errors CloudWatch, etc - Scaling : Kubernetes (EKS/GKE), etc. - Drift Detection: Monitor data/model performance decay.
 
